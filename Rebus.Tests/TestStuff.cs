@@ -114,7 +114,7 @@ namespace Rebus.Tests
         [Test, Ignore("Only run this bad boy if you know what you're doing :)")]
         public void DeleteRabbitMessageQueuesOnTheLocalSystem()
         {
-            var connection = new ConnectionFactory {Uri = RabbitMqFixtureBase.ConnectionString}.CreateConnection();
+            var connection = new ConnectionFactory {Uri = new Uri(RabbitMqFixtureBase.ConnectionString)}.CreateConnection();
             
             using(var model = connection.CreateModel())
             {

@@ -10,6 +10,8 @@ using Rebus.Bus;
 using Rebus.Logging;
 using Rebus.Shared;
 
+using Headers = Rebus.Shared.Headers;
+
 namespace Rebus.RabbitMQ
 {
     using System.Linq;

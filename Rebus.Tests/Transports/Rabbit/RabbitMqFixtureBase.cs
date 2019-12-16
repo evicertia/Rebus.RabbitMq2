@@ -81,7 +81,7 @@ namespace Rebus.Tests.Transports.Rabbit
 
         public static void DeleteQueue(string queueName)
         {
-            using (var connection = new ConnectionFactory { Uri = ConnectionString }.CreateConnection())
+            using (var connection = new ConnectionFactory { Uri = new Uri(ConnectionString) }.CreateConnection())
             using (var model = connection.CreateModel())
             {
                 // just ignore if it fails...
@@ -97,7 +97,7 @@ namespace Rebus.Tests.Transports.Rabbit
 
         public static void WithModel(Action<IModel> modelCallback)
         {
-            using (var connection = new ConnectionFactory {Uri = ConnectionString}.CreateConnection())
+            using (var connection = new ConnectionFactory {Uri = new Uri(ConnectionString)}.CreateConnection())
             using (var model = connection.CreateModel())
             {
                 modelCallback(model);
@@ -106,7 +106,7 @@ namespace Rebus.Tests.Transports.Rabbit
 
         public static bool DeclareExchange(string exchangeName, string type, bool passive=false)
         {
-            using (var connection = new ConnectionFactory { Uri = ConnectionString }.CreateConnection())
+            using (var connection = new ConnectionFactory { Uri = new Uri(ConnectionString) }.CreateConnection())
             using (var model = connection.CreateModel())
             {
                 // just ignore if it fails...
@@ -132,7 +132,7 @@ namespace Rebus.Tests.Transports.Rabbit
 
         public static void DeleteExchange(string exchangeName)
         {
-            using (var connection = new ConnectionFactory { Uri = ConnectionString }.CreateConnection())
+            using (var connection = new ConnectionFactory { Uri = new Uri(ConnectionString) }.CreateConnection())
             using (var model = connection.CreateModel())
             {
                 // just ignore if it fails...
@@ -148,7 +148,7 @@ namespace Rebus.Tests.Transports.Rabbit
 
         public static bool DeclareQueue(string queueName, bool durable = true, bool exclusive = false, bool autoDelete = false, bool passive = false)
         {
-            using (var connection = new ConnectionFactory { Uri = ConnectionString }.CreateConnection())
+            using (var connection = new ConnectionFactory { Uri = new Uri(ConnectionString) }.CreateConnection())
             using (var model = connection.CreateModel())
             {
                 // just ignore if it fails...

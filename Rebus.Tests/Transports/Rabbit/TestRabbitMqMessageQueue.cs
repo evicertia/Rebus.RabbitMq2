@@ -18,6 +18,7 @@ using Rebus.Serialization.Json;
 using Rebus.Shared;
 using Shouldly;
 using Message = Rebus.Messages.Message;
+using Headers = Rebus.Shared.Headers;
 
 namespace Rebus.Tests.Transports.Rabbit
 {
@@ -89,7 +90,7 @@ namespace Rebus.Tests.Transports.Rabbit
 
         bool QueueExists(string queueName)
         {
-            using (var connection = new ConnectionFactory { Uri = ConnectionString }.CreateConnection())
+            using (var connection = new ConnectionFactory { Uri = new Uri(ConnectionString) }.CreateConnection())
             {
                 using (var model = connection.CreateModel())
                 {
@@ -115,7 +116,7 @@ namespace Rebus.Tests.Transports.Rabbit
 
         bool ExchangeExists(string exchangeName)
         {
-            using (var connection = new ConnectionFactory { Uri = ConnectionString }.CreateConnection())
+            using (var connection = new ConnectionFactory { Uri = new Uri(ConnectionString) }.CreateConnection())
             {
                 using (var model = connection.CreateModel())
                 {
@@ -289,7 +290,7 @@ namespace Rebus.Tests.Transports.Rabbit
 
                 // act
                 // send a message with a complex header
-                using (var connection = new ConnectionFactory { Uri = ConnectionString }.CreateConnection())
+                using (var connection = new ConnectionFactory { Uri = new Uri(ConnectionString) }.CreateConnection())
                 using (var model = connection.CreateModel())
                 {
                     var props = model.CreateBasicProperties();

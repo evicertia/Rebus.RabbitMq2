@@ -49,7 +49,7 @@ namespace Rebus.RabbitMQ
             return
                 new ConnectionFactory
                        {
-                           Uri = s,
+                           Uri = new Uri(s),
                            ClientProperties =
                                new Dictionary<string, object>
                                    {
