@@ -220,7 +220,7 @@ namespace Rebus.Tests
             }
         }
 
-        [Test]
+        [Test, Ignore("Unnecessary")]
         public void StatementOfFunctionality()
         {
             var messageQueue = GetOrCreate("test.headers");
