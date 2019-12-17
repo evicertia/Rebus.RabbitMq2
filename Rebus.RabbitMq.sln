@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B09980FB-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspec", "nuspec", "{9A835FA7-6BCF-4A99-B4EC-D9BA8A91A4CA}"
 	ProjectSection(SolutionItems) = preProject
-		..\scripts\Rebus.RabbitMQ.nuspec = ..\scripts\Rebus.RabbitMQ.nuspec
+		Rebus.RabbitMQ\Rebus.RabbitMQ.nuspec = Rebus.RabbitMQ\Rebus.RabbitMQ.nuspec
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebus.RabbitMQ", "Rebus.RabbitMQ\Rebus.RabbitMQ.csproj", "{5836C347-90FC-4628-B4A1-16926B6CA781}"
