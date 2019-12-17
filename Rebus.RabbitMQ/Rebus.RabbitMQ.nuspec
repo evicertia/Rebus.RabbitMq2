@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Rebus.RabbitMQ</id>
+    <id>Rebus.RabbitMQ2</id>
     <version>0.0.2</version>
-    <title>Rebus.RabbitMQ</title>
-    <authors>mookid8000</authors>
-    <owners>mookid8000,rasmuskl</owners>
+    <title>Rebus.RabbitMQ2</title>
+    <authors>Evidencias Certificadas, S.L.</authors>
+    <owners>Evidencias Certificadas, S.L.</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <projectUrl>http://mookid.dk/oncode/rebus</projectUrl>
+    <projectUrl>https://github.com/evicertia/Rebus.RabbitMq2</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Provides a RabbitMQ transport implementation for Rebus</description>
     <copyright>Copyright 2012</copyright>
