@@ -21,11 +21,11 @@ namespace Rebus.Tests
 
         public const int AvailableHttpPort = 17834;
 
-#if DEBUG
-        public const bool IgnoreLongRunningTests = true;
-#else
+//#if DEBUG
+//        public const bool IgnoreLongRunningTests = true;
+//#else
         public const bool IgnoreLongRunningTests = false;
-#endif
+//#endif
 
         [TestCase(typeof(RabbitMqFixtureBase), Rabbit)]
         public void AssertCategoriesIfPossible(Type fixtureBaseType, string expectedCategoryName)
