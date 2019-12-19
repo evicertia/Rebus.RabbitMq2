@@ -19,6 +19,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src=".\bin\Release\Rebus.RabbitMQ2.dll" target="lib" />
+    <file src=".\bin\Release\Rebus.RabbitMQ.dll" target="lib" />
   </files>
 </package>
